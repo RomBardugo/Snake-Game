@@ -15,7 +15,7 @@ class Score(Turtle):
 
 
     def init_highScore(self):
-        with open("venv/High_Score.txt", "w") as file:
+        with open("High_Score.txt", "w") as file:
             high_score= file.write("0")
         return high_score
 
@@ -26,7 +26,7 @@ class Score(Turtle):
     def reset(self):
         if self.score > self.highScore:
             self.highScore = self.score
-            with open("venv/High_Score.txt", "w") as file:
+            with open("High_Score.txt", "w") as file:
                 file.write(str(self.highScore))
         self.score = 0
         self.display_score()
